@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BADGE SHOP | THE WHOLE WORLD IS UNDER YOUR FEET!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <style>
+      body  {
+        background-image: url("mountain1.jpg");
+        background-color: #cccccc;
+      }
+      </style>
+</head>
+<body>
+  
+
+<nav class="navbar navbar-expand-sm">
+    <a  class="navbar-brand" href="Intro.html" ><h1 style="color: greenyellow; font-family:sans-serif" >BadgeShop</h1></a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="Footwear.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Footwear</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Feed.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Feed</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Fashion.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Fashion</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="Contact.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Contact</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane container active" id="Feed">...</div>
+    <div class="tab-pane container fade" id="Footwear">...</div>
+    <div class="tab-pane container fade" id="Fashion">...</div>
+    <div class="tab-pane container fade" id="Contact">...</div>
+
+</div>
+</nav>
+<br>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for brands.. " style="margin-left: 10px; margin-bottom: 10px" >
+<ul id="myUL" style="margin-left: 10px" >
+  <li onclick="filterSelection('all')"><a href="#"><h6>Show all</h6></a></li>
+  <li onclick="filterSelection('Nike')"><a href="#" ><h6>Nike</h6></a></li>
+  <li onclick="filterSelection('Puma')"><a href="#"><h6>Puma</h6></a></li>
+  <li onclick="filterSelection('Skechers')"><a href="#"><h6>Skechers</h6></a></li>
+  <li onclick="filterSelection('Converse')"><a href="#"><h6>Converse</h6></a></li>
+  <li onclick="filterSelection('UnderArmour')"><a href="#"><h6>UnderArmour</h6></a></li>
+  <li onclick="filterSelection('NewBalance')"><a href="#"><h6>NewBalance</h6></a></li>
+</ul>
+
+<br>
+
+<div id="Collections" class="container">
+    <div class="filterDiv Nike"><a href="https://www.nike.com/vn/t/air-force-1-utility-shoe-DHC5H5"><img src="airforce1.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Nike Air force 1</p></a></div>
+    <div class="filterDiv Nike"><a href="https://store.nike.com/vn/en_gb/pd/air-jordan-4-retro-shoe/pid-12442354/pgid-12577993"><img src="airjordan4.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Nike Air Jordan 4</p></a></div>
+    <div class="filterDiv Nike"><a href="https://www.nike.com/vn/t/air-max-98-shoe-kW5Qfw/640744-602"><img src="airmax98.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Nike Air Max 98</p></a></div>
+    <div class="filterDiv Nike"><a href="https://www.flightclub.com/air-foamposite-one-legion-green-black-black-802556"><img src="airfoamone.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Nike Air Foamposite One</p></a></div>
+    <div class="filterDiv Puma"><a href="https://us.puma.com/en/us/pd/thunder-spectra-men%E2%80%99s-sneakers/367516.html"><img src="puma1.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Thunder Spectra Snkers</p></a></div>
+    <div class="filterDiv Puma"><a href="https://us.puma.com/en/us/pd/suede-classic%2B-sneakers/352634.html"><img src="puma2.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Suede Classic Snkers</p></a></div>
+    <div class="filterDiv Puma"><a href="https://ca.puma.com/en/us/pd/cell-venom-mita-sneakers/370339.html"><img src="puma3.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>CELL Venom Mita Snkers</p></a></div>
+    <div class="filterDiv Puma"><a href="https://us.puma.com/en/us/pd/puma-x-ader-error-rs-1-sneakers/369537.html"><img src="puma4.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>PUMA x ADER ERROR RS-1 Snkers</p></a></div>
+    <div class="filterDiv Skechers"><a href="https://www.skechers.com/en-us/style/51909/matera-graftel/bkw"><img src="sk1.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Men's Matera - Graftel</p></a></div>
+    <div class="filterDiv Skechers"><a href="https://www.skechers.com/en-us/style/51828/energy-brunkz/bbk"><img src="sk2.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Men's Energy - Brunkz</p></a></div>
+    <div class="filterDiv Skechers"><a href="https://www.skechers.com/en-us/style/52683/d-lites-3-0-goblin/bkw"><img src="sk3.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Men's D'Lites 3.0 - Goblin</p></a></div>
+    <div class="filterDiv Converse"><a href="https://www.converse.com.vn/men/sneakers-1/chuck-taylor-all-star-1/chuck-70-base-camp-suede-2/162373c.html"><img src="cv1.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Chuck 70 Base Camp Suede</p></a></div>
+    <div class="filterDiv Converse"><a href="https://www.converse.com.vn/women/sneakers/chuck-taylor-all-star/chuck-70-goretex/162349v.html"><img src="cv2.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Chuck 70 Goretex</p></a></div>
+    <div class="filterDiv Converse"><a href="https://www.converse.com.vn/men/collection-1/the-throwback-1/chuck-taylor-1970s-hi-/162050c.html"><img src="cv3.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>Chuck Taylor 1970s Hi</p></a></div>
+    <div class="filterDiv UnderArmour"><a href="https://www.underarmour.com/en-us/mens-ua-hovr-phantom-se-running-shoes/pid3022275"><img src="u1.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>UA HOVR™ Phantom/SE</p></a></div>
+    <div class="filterDiv UnderArmour"><a href="https://www.underarmour.com/en-us/mens-ua-hovr-phantom-se-running-shoes/pid3022275-100"><img src="u2.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>UA HOVR™ Infinite</p></a></div>
+    <div class="filterDiv UnderArmour"><a href="https://www.underarmour.com/en-us/ua-hovr-guardian-ct/pid3021226"><img src="u3.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>UA HOVR™ Guardian</p></a></div>
+    <div class="filterDiv UnderArmour"><a href="https://www.underarmour.com/en-us/ua-hovr-havoc-low/pid3020618"><img src="u4.jpg" draggable="true"  width="85%" style="padding-top:10%" ><p>UA HOVR™ Havoc</p></a></div>
+    <div class="filterDiv NewBalance"><a href="https://www.newbalance.com/pd/574-sport/MS574-V2SM.html?dwvar_MS574-V2SM_color=Pigment_with_White#color=Pigment_with_White&width=D"><img src="nb1.JPG" draggable="true"  width="85%" style="padding-top:10%" ><p>574 Sport</p></a></div>
+    <div class="filterDiv NewBalance"><a href="https://www.newbalance.com/pd/997h/CM997H-Y.html#color=White_with_Laser%20Blue&width=D"><img src="nb2.JPG" draggable="true"  width="85%" style="padding-top:10%" ><p>Fresh Foam Lazr v2 HypoKnit</p></a></div>
+    <div class="filterDiv NewBalance"><a href="https://www.newbalance.com/pd/574-pebbled-sport/ML574-V2SU.html?dwvar_ML574-V2SU_color=Team%20Red_with_Pigment&rrec=true#color=Team%20Red_with_Pigment"><img src="nb3.JPG" draggable="true"  width="85%" style="padding-top:10%" ><p>997H</p></a></div>
+    <div class="filterDiv NewBalance"><a href="https://www.newbalance.com/pd/998-made-in-the-usa-bringback/M998-RI.html#color=Light%20Grey_with_Grey&width=D"><img src="nb4.JPG" draggable="true"  width="85%" style="padding-top:10%" ><p>998 Made in US</p></a></div>
+
+</div>
+
+<script>
+  
+  function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+  
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+
+  filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+var myUL = document.getElementById("myUL");
+var btns = myUL.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+  </script>
+
+</body>
+</html>
+
+

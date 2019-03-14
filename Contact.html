@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BADGE SHOP | THE WHOLE WORLD IS UNDER YOUR FEET!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <style>
+      body  {
+        background-image: url("mountain1.jpg");
+        background-color: #cccccc;
+      }
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+      </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <a  class="navbar-brand" href="Intro.html" ><h1 style="color: greenyellow; font-family:sans-serif" >BadgeShop</h1></a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="Footwear.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Footwear</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Feed.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Feed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Fashion.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Fashion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Contact.html" style ="color: greenyellow; font-family:sans-serif; font-size: x-large">Contact</a>
+        </li>
+      </ul>
+  <div class="tab-content">
+    <div class="tab-pane container active" id="Feed">...</div>
+    <div class="tab-pane container fade" id="Footwear">...</div>
+    <div class="tab-pane container fade" id="Fashion">...</div>
+    <div class="tab-pane container fade" id="Contact">...</div>
+
+</div>
+</nav>
+
+
+<section class="section pb-5">
+    <br>
+  
+    <div class="row" style="padding-left: 10px">
+  
+      <div class="col-lg-5 mb-4" >
+
+        <div class="card">
+          <form onsubmit="save_data()">
+              <div class="card-body">
+            
+                  <div class="form-header blue accent-1" >
+                    <h3><i class="fas fa-envelope"></i> Write to us:</h3>
+                  </div>
+        
+                  <p>We'll write rarely, but only the best content.</p>
+      
+                  <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <label for="form-name">Your name</label>
+                    <input type="text" id="form-name" class="form-control">
+                  </div>
+        
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <label for="form-email">Your email</label>
+                    <input type="text" id="form-email" class="form-control">
+                  </div>
+        
+                  <div class="md-form">
+                    <i class="fas fa-tag prefix grey-text"></i>
+                    <label for="form-Subject">Subject</label>
+                    <input type="text" id="form-Subject" class="form-control">
+                  </div>
+        
+                  <div class="md-form">
+                    <i class="fas fa-pencil-alt prefix grey-text"></i>
+                    <label for="form-text">Comment</label>
+                    <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                  </div>
+                  <br>
+
+                  <div class="md-form" id="form-react">
+                    <label for="form-react">
+                      <p style="font-family: monospace;color:black; font-size:22px">Are you happy with our shop's products ?</p>
+                      <p style="font-family: monospace;color:black; font-size:10px">(Drag your reaction into the box)</p>
+                    </label>
+                    
+                    <img id="drag1" alt="Yes" src="smile.png" draggable="true" ondragstart="drag(event)" width="10%" height="10%">
+                    <img id="drag2" alt="No" src="sad.png" draggable="true" ondragstart="drag(event)" width="10%" height="10%" style="margin-left:10px">
+                    <br>
+                    <br>
+                      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  </div>
+                  <div id="demo"></div>
+                  <div class="text-center col-xl-">
+                      <button class="btn btn-light-blue" value="Submit" id="Submit" data-theme="a">Submit</button>
+                    </div> 
+                </div>
+          </form>
+          
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px; border: 1px solid black">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7840.1175289090415!2d106.69417351904906!3d10.729951111412545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbea5fe3db1%3A0xfae94aca5709003f!2sRMIT+University!5e0!3m2!1svi!2s!4v1552492850520" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>"
+            frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <br>
+
+        <div class="row text-center">
+          <div class="col-md-4">
+            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+            <p style="color:black; font-size:20px">Ho Chi Minh city, 700000</p>
+            <p style="color:black; font-size:20px">Vietnam</p>
+          </div>
+  
+          <div class="col-md-4">
+            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+            <p style="color:black; font-size:20px">(+84) 889 344 563</p>
+            <p style="color:black; font-size:20px">Mon - Fri, 8:00-22:00</p>
+          </div>
+  
+          <div class="col-md-4">
+            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+            <p style="color:black; font-size:20px">s3746259@rmit.edu.vn</p>
+            <p style="color:black; font-size:20px">phongchan99@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      
+  
+  <div id="storedValue"></div>
+
+<button class="open-button" onclick="openForm()">Chat with us</button>
+
+<div class="chat-popup" id="myForm" onsubmit="save_data()">
+  <form class="form-container">
+    <h1>Tell us what you need</h1>
+
+    <label for="form-msg"><b>Message to the shop owner</b></label>
+    <textarea placeholder="Type message.." name="msg" id="form-msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+  <script> 
+      function save_data() {
+        var formName = document.getElementById("form-name");
+        localStorage.formName= formName.value
+
+        var formEmail = document.getElementById("form-email");
+        localStorage.formEmail = formEmail.value
+
+        var formSubject = document.getElementById("form-Subject");
+        localStorage.formSubject = formSubject.value
+
+        var formText = document.getElementById("form-text");
+        localStorage.formText = formText.value
+      
+        var formMsg = document.getElementById("form-msg");
+        localStorage.formMsg = formMsg.value
+      }
+
+      
+
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        document.getElementById("demo").style.color = "red";
+      }
+      
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+
+        document.addEventListener("dragend", function(event) {
+        document.getElementById("demo").innerHTML = "Thanks for your response.";
+        event.target.style.opacity = "1";
+      });
+    
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      
+      </script>
+</body>
